@@ -595,3 +595,16 @@
     object-fit: cover;
   }
   
+  .slide-our-team .back {
+    left: 1100px;
+    position: absolute;
+    width: 241px;
+    top: 920px;
+    font-family: "Inter-Light", Helvetica;
+    font-weight: 300;
+    background-color: #ffffff;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
