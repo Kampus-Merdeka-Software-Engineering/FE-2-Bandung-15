@@ -4,15 +4,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <title>Gallery's Hotel</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="slide-home">
-      <div class="div">
-
-
-        <header>
+  <div class="slide-home">
+    <div class="div">
+      <!-- bagian header -->
+      <header>
             <a href="#" class="logo"><img src="asset/Logo.png" id="logoNav" width="100px" alt=""><span></span></a>
             <div class="menuToggle" onclick="toggleMenu()"></div>
             <ul class="navigation">
@@ -23,10 +24,11 @@
                 <li><a href="ourteam.html" id="team-link">Our Team</a></li>
                 <li><a href="welcome.html"id="login-link">Login</a></li>
             </ul>
-        </header>
+      </header>
  
-    <awal>
-        <div class="home">
+      <!-- bagian home -->
+      <awal>
+          <div class="home">
           <div class="overlap-2">
             <img class="hotel" src="asset/Hotel.jfif" id="awal" />
             <p class="p">Find your perfect place to stay</p>
@@ -46,15 +48,15 @@
             <div class="text-wrapper-13">Book Now</div>
           </div>
         </div>
-    </awal>
+      </awal>
 
-
-    <location>
-    <div class="location" id="location">
+      <!-- bagian location -->
+      <location>
+        <div class="location" id="location">
           <div class="text-wrapper-14">Location</div>
           <p class="text-wrapper-15"><br>
-            Hotel Gallery’s is a place of tranquility and charm amidst the hustle and bustle of Jawa district, Indonesia
-            main commercial area
+              Hotel Gallery’s is a place of tranquility and charm amidst the hustle and bustle of Jawa district, Indonesia
+              main commercial area
           </p>
           <img class="jawa" src="asset/Jawa.jfif" />
           <div class="text-wrapper-16">Jawa</div>
@@ -67,10 +69,10 @@
           <img class="kalimantan" src="asset/Kalimantan.jfif" />
           <div class="text-wrapper-19">Kalimantan</div>
         </div>
-    </location>
-
-
-    <facilities>
+      </location>
+		  
+      <!-- bagian facilities -->
+      <facilities>
         <div class="facilities" id="facilities">
           <div class="text-wrapper-20">Facilities</div>
           <div class="overlap-3">
@@ -111,10 +113,10 @@
             <img class="other-service" src="asset/Other Service.png" />
           </div>
         </div>
-    </facilities>
+      </facilities>
 
-
-    <contact>
+      <!-- bagian contact -->
+      <contact>
         <div class="contact-us" id="contact">
           <div class="text-wrapper-28">CONTACT US</div>
           <p class="text-we-are">WE ARE FOR YOU</p>
@@ -123,18 +125,18 @@
             request,&nbsp;&nbsp;please forward it to our support desk and we will get back to you as soon as possible.
           </p>
           <div class="name">Nama:</div>
-          <div class="div-wrapper"><div class="text-wrapper-29">Your Name</div></div>
+          <div class="div-wrapper"><div class="text-wrapper-29"><input type="text" id="yname" value=""></div></div>
           <div class="text-wrapper-30">Email:</div>
-          <div class="overlap-10"><div class="text-wrapper-31">Your Email</div></div>
+          <div class="overlap-10"><div class="text-wrapper-31"><input type="text" id="yname" value=""></div></div>
           <div class="text-wrapper-32">Message:</div>
-          <div class="overlap-11"><div class="text-wrapper-33">message...</div></div>
-          <div class="overlap-12"><div class="text-wrapper-34">SUBMIT</div></div>
+          <div class="overlap-11"><div class="text-wrapper-33"><input  type="text" value="Message..."></div></div>
+          <button class="overlap-12"><div class="text-wrapper-34" onclick="addNewContact()">SUBMIT</button></div>
         </div>
       </contact>
 
-
-        <footer class="footer">
-          <div class="overlap-13">
+      <!-- bagian footer -->
+      <footer class="footer">
+        <div class="overlap-13">
             <img class="copyright" src="asset/Copyright.png" />
             <p class="text-wrapper-35">2018-2023 Gallery’s Hotel - Ry’s H 15 All Rights Reserved</p>
             <p class="awal"><a href="#awal" id="home" style="color: white" class="active">Home</a></p>
@@ -144,14 +146,17 @@
             <p class="hello"><a href="welcome.html" id="login" style="color: white" class="login-link">Login</a></p>
             <div class="text-wrapper-36">Gallery’s Hotel</div>
             <img class="loc" src="asset/lokasi.png" />
-            <p class="text-wrapper-37">Jl. DR. Ide Anak Agung Gde Agung Jakarta, Indonesia</p>
+            <p class="text-wrapper-37">Jl. Revou No.15 Bandung, Indonesia</p>
             <img class="mail" src="asset/email footer.png" />
             <p class="text-wrapper-38">sangpemimpiteam15@gmail.com</p>
             <img class="telp" src="asset/telp.png" />
             <p class="text-wrapper-39">0812-3456-7890</p>
-          </div>
-        </footer>
-      </div>
+        </div>
+      </footer>
+
     </div>
+  </div>
+  
   </body>
+<script src="js/script.js"></script>
 </html>

@@ -781,8 +781,8 @@ header{
 }
 
 .slide-home .text-wrapper-29 {
-  top: 15px;
-  left: 19px;
+  top: 10px;
+  left: 13px;
   position: absolute;
   width: 356px;
   font-family: "Poppins-SemiBold", Helvetica;
@@ -816,7 +816,7 @@ header{
 }
 
 .slide-home .text-wrapper-31 {
-  top: 15px;
+  top: 10px;
   left: 13px;
   position: absolute;
   width: 356px;
@@ -876,7 +876,7 @@ header{
 .slide-home .text-wrapper-34 {
   position: absolute;
   width: 74px;
-  top: 10px;
+  top: 8px;
   left: 17px;
   font-family: "Poppins-SemiBold", Helvetica;
   font-weight: 600;
@@ -1067,4 +1067,16 @@ header{
   font-size: 18px;
   letter-spacing: 0;
   line-height: normal;
+}
+
+@media screen and (max-width:680px){
+
+	#maincontent{
+		width: auto;
+		float: none;
+	}
+	#sidebar{
+		width: auto;
+		float: none;
+	}
 }
