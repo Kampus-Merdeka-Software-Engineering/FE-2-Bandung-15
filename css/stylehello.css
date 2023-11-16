@@ -1,0 +1,110 @@
+.slide-hello {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.slide-hello .div {
+  background-color: #ffffff;
+  width: 1280px;
+  height: 832px;
+  position: relative;
+}
+
+.slide-hello .overlap-group {
+  position: absolute;
+  width: 315px;
+  height: 274px;
+  top: 59px;
+  left: 478px;
+}
+
+.slide-hello .login {
+  position: absolute;
+  width: 315px;
+  height: 240px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.slide-hello .text-wrapper {
+  position: absolute;
+  width: 140px;
+  top: 238px;
+  left: 93px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.slide-hello .p {
+  position: absolute;
+  width: 765px;
+  top: 340px;
+  left: 257px;
+  font-family: "Inter-Light", Helvetica;
+  font-weight: 300;
+  color: #000000;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.slide-hello .overlap {
+    position: absolute;
+    width: 356px;
+    height: 314px;
+    top: 120px;
+    left: 462px;
+  }
+
+.slide-hello .text-wrapper-2 {
+  position: absolute;
+  width: 54px;
+  top: 9px;
+  left: 57px;
+  mix-blend-mode: color-dodge;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.slide-hello .div-wrapper {
+  position: absolute;
+  width: 178px;
+  height: 36px;
+  top: 438px;
+  left: 551px;
+  background-image: url(./img/rectangle-19.svg);
+  background-size: 100% 100%;
+}
+
+.slide-hello .text-wrapper-3 {
+  position: absolute;
+  width: 67px;
+  top: 7px;
+  left: 50px;
+  mix-blend-mode: color-dodge;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
