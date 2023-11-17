@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .slide-home {
   background-color: #ffffff;
   display: flex;
@@ -47,7 +51,10 @@ header{
   header .navigation{
     position: relative;
     display: flex;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 24px;
   }
+
   header .navigation li{
     list-style : none;
     margin-left: 30px;
@@ -762,7 +769,7 @@ header{
   position: absolute;
   width: 74px;
   top: 265px;
-  left: 341px;
+  left: 415px;
   font-family: "Poppins-SemiBold", Helvetica;
   font-weight: 600;
   color: #2f3044;
@@ -773,16 +780,16 @@ header{
 
 .slide-home .div-wrapper {
   position: absolute;
-  width: 393px;
+  width: 202px;
   height: 42px;
   top: 287px;
-  left: 328px;
+  left: 415px;
   background-color: #7599b4;
 }
 
 .slide-home .text-wrapper-29 {
-  top: 10px;
-  left: 13px;
+  top: 15px;
+  left: 19px;
   position: absolute;
   width: 356px;
   font-family: "Poppins-SemiBold", Helvetica;
@@ -797,7 +804,7 @@ header{
   position: absolute;
   width: 78px;
   top: 349px;
-  left: 337px;
+  left: 415px;
   font-family: "Poppins-SemiBold", Helvetica;
   font-weight: 600;
   color: #2f3044;
@@ -808,15 +815,15 @@ header{
 
 .slide-home .overlap-10 {
   position: absolute;
-  width: 393px;
+  width: 200px;
   height: 42px;
   top: 380px;
-  left: 328px;
+  left: 415px;
   background-color: #7599b4;
 }
 
 .slide-home .text-wrapper-31 {
-  top: 10px;
+  top: 15px;
   left: 13px;
   position: absolute;
   width: 356px;
@@ -832,7 +839,7 @@ header{
   position: absolute;
   width: 87px;
   top: 440px;
-  left: 337px;
+  left: 415px;
   font-family: "Poppins-SemiBold", Helvetica;
   font-weight: 600;
   color: #2f3044;
@@ -843,10 +850,10 @@ header{
 
 .slide-home .overlap-11 {
   position: absolute;
-  width: 393px;
+  width: 202px;
   height: 69px;
   top: 469px;
-  left: 328px;
+  left: 415px;
   background-color: #7599b4;
 }
 
@@ -876,7 +883,7 @@ header{
 .slide-home .text-wrapper-34 {
   position: absolute;
   width: 74px;
-  top: 8px;
+  top: 10px;
   left: 17px;
   font-family: "Poppins-SemiBold", Helvetica;
   font-weight: 600;
@@ -890,7 +897,7 @@ header{
 .slide-home .footer {
   position: absolute;
   width: 1424px;
-  height: 220px;
+  height: 250px;
   top: 3007px;
   left: 0;
   background-color: transparent;
@@ -899,7 +906,7 @@ header{
 .slide-home .overlap-13 {
   position: relative;
   width: 1414px;
-  height: 210px;
+  height: 250px;
   background-color: #7599b4;
 }
 
@@ -1069,14 +1076,27 @@ header{
   line-height: normal;
 }
 
-@media screen and (max-width:680px){
+.to-top {
+  background: white;
+  position: fixed;
+  bottom: 16px;
+  right:32px;
+  width:50px;
+  height:50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size:32px;
+  color:#1f1f1f;
+  text-decoration: none;
+  opacity:0;
+  pointer-events: none;
+  transition: all .4s;
+}
 
-	#maincontent{
-		width: auto;
-		float: none;
-	}
-	#sidebar{
-		width: auto;
-		float: none;
-	}
+.to-top.active {
+  bottom:32px;
+  pointer-events: auto;
+  opacity:1;
 }

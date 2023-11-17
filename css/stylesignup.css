@@ -1,3 +1,54 @@
+header{
+  top: 0;
+  left: 0;
+  width: 85%;
+  padding: 10px 100px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+  background-color: #7599b4 ;
+}
+header.sticky{
+  background-color: #7599b4;
+  padding: 10px 100px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+header .logo{
+  color: white;
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: none;
+}
+header.sticky .logo{
+  color: #fff;
+}
+header .logo span{
+  color: white ;
+}
+header .navigation{
+  position: relative;
+  display: flex;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 24px;
+}
+
+header .navigation li{
+  list-style : none;
+  margin-left: 30px;
+}
+header.sticky .navigation li a{
+  color: #fff;
+}
+header .navigation li a{
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+}
+header .navigation li a:hover{
+  color:#fff
+}
 .slide-sign-up {
   background-color: #ffffff;
   position: fixed;
@@ -72,8 +123,8 @@
 
 .slide-sign-up .overlap-group {
   position: absolute;
-  width: 193px;
-  height: 22px;
+  width: 227px;
+  height: 30px;
   top: 298px;
   left: 649px;
   background-color: #cbd0db;
@@ -105,8 +156,8 @@
 
 .slide-sign-up .div-wrapper {
   position: absolute;
-  width: 193px;
-  height: 22px;
+  width: 227px;
+  height: 27px;
   top: 337px;
   left: 649px;
   background-color: #cbd0db;
@@ -138,8 +189,8 @@
 
 .slide-sign-up .overlap-2 {
   position: absolute;
-  width: 193px;
-  height: 21px;
+  width: 227px;
+  height: 27px;
   top: 376px;
   left: 649px;
   background-color: #cbd0db;
@@ -148,8 +199,8 @@
 
 .slide-sign-up .overlap-3 {
   position: absolute;
-  width: 128px;
-  height: 18px;
+  width: 130px;
+  height: 22px;
   top: 414px;
   left: 682px;
   background-color: #5d7caf;
@@ -252,16 +303,3 @@
     line-height: normal;
   }
 
-  .slide-sign-up .back {
-    left: 1100px;
-    position: absolute;
-    width: 241px;
-    top: 560px;
-    font-family: "Inter-Light", Helvetica;
-    font-weight: 300;
-    background-color:#547792;
-    font-size: 30px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-  }

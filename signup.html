@@ -4,6 +4,15 @@
     <link rel="stylesheet" href="css/stylesignup.css" />
   </head>
   <body>
+    <header>
+      <a href="#" class="logo"><img src="asset/Logo.png" id="logoNav" width="100px" alt=""><span></span></a>
+      <div class="menuToggle" onclick="toggleMenu()"></div>
+      <ul class="navigation">
+          <li><a href="index.html" id="home" class="active">Home</a></li>
+          <li><a href="ourteam.html" id="team-link">Our Team</a></li>
+          <li><a href="welcome.html"id="login-link">Login</a></li>
+      </ul>
+    </header>
     <div class="slide-sign-up">
       <div class="div">
         <div class="overlap">
@@ -12,20 +21,19 @@
         </div>
         <div class="text-wrapper-2">SIGN UP</div>
         <img class="guest" src="asset/Room & Guest.png" />
-        <div class="overlap-group"><div class="text-wrapper-3">Username</div></div>
+        <div class="overlap-group"><div class="text-wrapper-3"><input type="text" id="yname" value="Username"></div></div>
         <img class="email" src="asset/Email.png" />
-        <div class="div-wrapper"><div class="text-wrapper-4">Email</div></div>
+        <div class="div-wrapper"><div class="text-wrapper-4"><input type="text" id="yname" value="Email"></div></div>
         <img class="kunci" src="asset/Kunci.png" />
         <div class="overlap-2"><div class="text-wrapper-4">Password</div></div>
-        <div class="overlap-3"><div class="text-wrapper-5">Sign Up</div></div>
+        <button class="overlap-3"><div class="text-wrapper-5">Sign Up</div></button>
         <div class="overlap-group-2">
           <div class="text-wrapper-6">Do have account?</div>
           <div class="text-wrapper-7"><a href="signin.html">Sign In</a></div>
         </div>
         <div class="overlap-2">
-            <div class="text-wrapper-4">Password</div>
+            <div class="text-wrapper-4"><input type="text" id="yname" value="Password"></div>
           </div>
-          <p class="back"><a href="index.html" id="home" style="color: rgb(240, 240, 248)" class="active">Back</a></p>
       </div>
     </div>
   </body>

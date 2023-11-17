@@ -1,3 +1,56 @@
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 85%;
+  padding: 10px 100px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+  background-color: #7599b4 ;
+}
+header.sticky{
+  background-color: #7599b4;
+  padding: 10px 100px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+header .logo{
+  color: white;
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: none;
+}
+header.sticky .logo{
+  color: #fff;
+}
+header .logo span{
+  color: white ;
+}
+header .navigation{
+  position: relative;
+  display: flex;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 24px;
+}
+
+header .navigation li{
+  list-style : none;
+  margin-left: 30px;
+}
+header.sticky .navigation li a{
+  color: #fff;
+}
+header .navigation li a{
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+}
+header .navigation li a:hover{
+  color:#fff
+}
+
 .slide-hello {
   position: fixed;
   background-color: #ffffff;
@@ -25,22 +78,22 @@
 
 .slide-hello .hello {
   position: absolute;
-  width: 356px;
-  height: 287px;
-  top: 0;
-  left: 0;
+  width: 306px;
+  height: 237px;
+  top: 120px;
+  left: 17px;
   object-fit: cover;
 }
 
 .slide-hello .text-wrapper {
   position: absolute;
   width: 215px;
-  top: 272px;
+  top: 340px;
   left: 70px;
   font-family: "Inter-Bold", Helvetica;
   font-weight: 700;
   color: #000000;
-  font-size: 48px;
+  font-size: 22px;
   text-align: center;
   letter-spacing: 0;
   line-height: normal;
@@ -50,12 +103,12 @@
 .slide-hello .p {
   position: absolute;
   width: 795px;
-  top: 460px;
+  top: 475px;
   left: 242px;
   font-family: "Inter-Light", Helvetica;
   font-weight: 300;
   color: #000000;
-  font-size: 24px;
+  font-size: 18px;
   text-align: center;
   letter-spacing: 0;
   line-height: normal;

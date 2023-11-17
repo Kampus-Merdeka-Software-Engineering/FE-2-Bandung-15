@@ -1,3 +1,55 @@
+header{
+  top: 0;
+  left: 0;
+  width: 85%;
+  padding: 10px 100px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+  background-color: #7599b4 ;
+}
+header.sticky{
+  background-color: #7599b4;
+  padding: 10px 100px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+header .logo{
+  color: white;
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: none;
+}
+header.sticky .logo{
+  color: #fff;
+}
+header .logo span{
+  color: white ;
+}
+header .navigation{
+  position: relative;
+  display: flex;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 24px;
+}
+
+header .navigation li{
+  list-style : none;
+  margin-left: 30px;
+}
+header.sticky .navigation li a{
+  color: #fff;
+}
+header .navigation li a{
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+}
+header .navigation li a:hover{
+  color:#fff
+}
+
 .slide-sign-in {
   background-color: #ffffff;
   position: fixed;
@@ -56,8 +108,8 @@
 
 .slide-sign-in .overlap-group {
   position: absolute;
-  width: 201px;
-  height: 25px;
+  width: 220px;
+  height: 30px;
   top: 269px;
   left: 631px;
   background-color: #cbd0db;
@@ -88,8 +140,8 @@
 
 .slide-sign-in .div-wrapper {
   position: absolute;
-  width: 201px;
-  height: 25px;
+  width: 220px;
+  height: 30px;
   top: 321px;
   left: 631px;
   background-color: #cbd0db;
@@ -98,8 +150,8 @@
 
 .slide-sign-in .overlap-group-2 {
   position: absolute;
-  width: 96px;
-  height: 25px;
+  width: 100px;
+  height:28px;
   top: 381px;
   left: 684px;
   background-color: #5d7caf;
@@ -157,17 +209,3 @@
   letter-spacing: 0;
   line-height: normal;
 }
-
-.slide-sign-in .back {
-    left: 1100px;
-    position: absolute;
-    width: 241px;
-    top: 560px;
-    font-family: "Inter-Light", Helvetica;
-    font-weight: 300;
-    background-color:#547792;
-    font-size: 30px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-  }

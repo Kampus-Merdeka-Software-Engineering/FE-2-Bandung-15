@@ -5,18 +5,26 @@
     <link rel="stylesheet" href="css/stylesignin.css" />
   </head>
   <body>
+    <header>
+      <a href="#" class="logo"><img src="asset/Logo.png" id="logoNav" width="100px" alt=""><span></span></a>
+      <div class="menuToggle" onclick="toggleMenu()"></div>
+      <ul class="navigation">
+          <li><a href="index.html" id="home" class="active">Home</a></li>
+          <li><a href="ourteam.html" id="team-link">Our Team</a></li>
+          <li><a href="welcome.html"id="login-link">Login</a></li>
+      </ul>
+    </header>
     <div class="slide-sign-in">
       <div class="div">
-        <p class="back"><a href="index.html" id="home" style="color: rgb(240, 240, 248)" class="active">Back</a></p>
         <div class="overlap">
           <img class="login" src="asset/Login.png" />
           <div class="text-wrapper">SIGN IN</div>
         </div>
         <img class="guest" src="asset/Room & Guest.png" />
-        <div class="overlap-group"><div class="text-wrapper-2">Username</div></div>
+        <div class="overlap-group"><div class="text-wrapper-2"><input type="text" id="yname" value="Username"></div></div>
         <img class="kunci" src="asset/Kunci.png" />
-        <div class="div-wrapper"><div class="text-wrapper-2">Password</div></div>
-        <div class="overlap-group-2"><div class="text-wrapper-3">Sign In</div></div>
+        <div class="div-wrapper"><div class="text-wrapper-2"><input type="text" id="yname" value="Password"></div></div>
+        <button class="overlap-group-2"><div class="text-wrapper-3">Sign In</div></button>
         <div class="overlap-2">
           <div class="text-wrapper-4">Don’t have account?</div>
           <div class="text-wrapper-5"><a href="signup.html" id="home" class="active">Sign Up</a></div>

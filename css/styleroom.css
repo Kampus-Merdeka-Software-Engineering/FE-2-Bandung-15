@@ -345,17 +345,18 @@
     left: 0;
     background-color: #7599b4;
   }
-  
+
   .slide-room .back {
-    left: 1100px;
+    left: 1150px;
     position: absolute;
     width: 241px;
-    top: 565px;
+    top: 560px;
     font-family: "Inter-Light", Helvetica;
     font-weight: 300;
-    background-color: #7599b4;
+    background-color:#547792;
     font-size: 30px;
     text-align: center;
     letter-spacing: 0;
     line-height: normal;
   }
+  
