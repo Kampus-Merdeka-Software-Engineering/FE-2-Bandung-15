@@ -1,32 +1,29 @@
 <!DOCTYPE html>
+<html lang="en">
 <html>
-  <head>
+    <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery's Hotel- Welcome</title>
+    <title>Gallery's Hotel</title>
     <link rel="stylesheet" href="css/stylewelcome.css" />
-  </head>
-  <body>
-    <header>
-      <a href="#" class="logo"><img src="asset/Logo.png" id="logoNav" width="100px" alt=""><span></span></a>
-      <div class="menuToggle" onclick="toggleMenu()"></div>
-      <ul class="navigation">
-          <li><a href="index.html" id="home" class="active">Home</a></li>
-          <li><a href="ourteam.html" id="team-link">Our Team</a></li>
-          <li><a href="welcome.html"id="login-link">Login</a></li>
-      </ul>
-    </header>
-    
-    <div class="slide-hello">
-      <div class="div">
-        <div class="overlap">
-          <img class="hello" src="asset/Login.png" />
-          <div class="text-wrapper">HELLO !</div>
+
+    <form action="action_page.php" method="post">
+        <div class="imgcontainer">
+            <img src="./asset/Login.png" alt="Avatar" class="avatar">
+            <h1>HELLO!</h1>
+            <h3 style="color: rgb(5, 5, 50);"><i>The best place to write life stories and share your travel experiences</i></h3>
         </div>
-        <p class="p">The best place to write life stories and share your travel experiences</p>
-        <div class="overlap-group"><div class="text-wrapper-2"><a href="signin.html" style="color: aliceblue;" >SIGN IN</a></div></div>
-        <div class="div-wrapper"><div class="text-wrapper-3"><a href="signup.html" style="color: aliceblue;">SIGN UP</a></div></div>
-      </div>
-    </div>
-  </body>
-</html>
+
+        <div class="container">
+            <button type="submit"><a href="signin.html"id="login-link" style="color: white;">Sign In</a></button>
+            <br>
+            <button type="submit"><a href="signup.html"id="login-link" style="color: white;">Sign Up</a></button>
+            <br>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn"><a href="index.html"id="home-link" style="color: #f1f1f1;">Cancel</a></button>
+        </div>
+    </form>
+    </head> 
+<html>

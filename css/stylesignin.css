@@ -1,211 +1,75 @@
-header{
-  top: 0;
-  left: 0;
-  width: 85%;
-  padding: 10px 100px;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: 0.5s;
-  background-color: #7599b4 ;
-}
-header.sticky{
-  background-color: #7599b4;
-  padding: 10px 100px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-}
-header .logo{
-  color: white;
-  font-weight: 700;
-  font-size: 2em;
-  text-decoration: none;
-}
-header.sticky .logo{
-  color: #fff;
-}
-header .logo span{
-  color: white ;
-}
-header .navigation{
-  position: relative;
-  display: flex;
-  font-family:Georgia, 'Times New Roman', Times, serif;
-  font-size: 24px;
-}
+/* Bordered form */
+form {
+    border: 3px solid #f1f1f1;
+    text-align: center;
+  }
+  
+  /* Full-width inputs */
+  input[type=text], input[type=password] {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: #7599b4 ;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    background-color: #7599b4 ;
+    color: white;
+    padding: 14px 20px;
+    margin: 4px 0;
+    border: none;
+    cursor: pointer;
+    width: auto;
+    padding: 10px 50px;
+    text-align: auto center;
+  }
+  
+  /* Add a hover effect for buttons */
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Extra style for the cancel button (red) */
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+  /* Center the avatar image inside this container */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+  }
+  
+  /* Avatar image */
+  img.avatar {
+    width: 24%;
+  }
+  
+  /* Add padding to containers */
+  .container {
+    padding: 16px;
+  }
+  
+  /* The "Forgot password" text */
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+      display: block;
+      float: none;
+    }
 
-header .navigation li{
-  list-style : none;
-  margin-left: 30px;
-}
-header.sticky .navigation li a{
-  color: #fff;
-}
-header .navigation li a{
-  text-decoration: none;
-  color: white;
-  font-weight: 400;
-}
-header .navigation li a:hover{
-  color:#fff
-}
-
-.slide-sign-in {
-  background-color: #ffffff;
-  position: fixed;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-}
-
-.slide-sign-in .div {
-  background-color: #ffffff;
-  width: 1440px;
-  height: 1024px;
-  position: relative;
-}
-
-.slide-sign-in .overlap {
-  position: absolute;
-  width: 242px;
-  height: 212px;
-  top: 27px;
-  left: 606px;
-}
-
-.slide-sign-in .login {
-  position: absolute;
-  width: 242px;
-  height: 187px;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-}
-
-.slide-sign-in .text-wrapper {
-  width: 158px;
-  top: 182px;
-  left: 47px;
-  font-size: 24px;
-  text-align: center;
-  position: absolute;
-  font-family: "Inter-Bold", Helvetica;
-  font-weight: 700;
-  color: #000000;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.slide-sign-in .guest {
-  position: absolute;
-  width: 28px;
-  height: 25px;
-  top: 269px;
-  left: 597px;
-  object-fit: cover;
-}
-
-.slide-sign-in .overlap-group {
-  position: absolute;
-  width: 220px;
-  height: 30px;
-  top: 269px;
-  left: 631px;
-  background-color: #cbd0db;
-  border-radius: 100px;
-}
-
-.slide-sign-in .text-wrapper-2 {
-  position: absolute;
-  width: 63px;
-  top: 4px;
-  left: 18px;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 12px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.slide-sign-in .kunci {
-  position: absolute;
-  width: 39px;
-  height: 25px;
-  top: 321px;
-  left: 591px;
-  object-fit: cover;
-}
-
-.slide-sign-in .div-wrapper {
-  position: absolute;
-  width: 220px;
-  height: 30px;
-  top: 321px;
-  left: 631px;
-  background-color: #cbd0db;
-  border-radius: 100px;
-}
-
-.slide-sign-in .overlap-group-2 {
-  position: absolute;
-  width: 100px;
-  height:28px;
-  top: 381px;
-  left: 684px;
-  background-color: #5d7caf;
-  border-radius: 100px;
-}
-
-.slide-sign-in .text-wrapper-3 {
-  position: absolute;
-  width: 75px;
-  top: 3px;
-  left: 12px;
-  mix-blend-mode: color-dodge;
-  font-family: "Inter-Bold", Helvetica;
-  font-weight: 700;
-  color: #fff8f8;
-  font-size: 16px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-.slide-sign-in .overlap-2 {
-  position: absolute;
-  width: 241px;
-  height: 19px;
-  top: 445px;
-  left: 601px;
-}
-
-.slide-sign-in .text-wrapper-4 {
-  position: absolute;
-  width: 209px;
-  top: 0;
-  left: 0;
-  font-family: "Inter-Light", Helvetica;
-  font-weight: 300;
-  color: #000000;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-.slide-sign-in .text-wrapper-5 {
-  width: 70px;
-  top: 0;
-  left: 171px;
-  font-size: 16px;
-  white-space: nowrap;
-  position: absolute;
-  font-family: "Inter-Bold", Helvetica;
-  font-weight: 700;
-  color: #000000;
-  letter-spacing: 0;
-  line-height: normal;
-}
+    .cancelbtn {
+      width: 100%;
+    }
+  }
