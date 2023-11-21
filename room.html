@@ -1,35 +1,118 @@
 <!DOCTYPE html>
+<html lang="en">
 <html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery's Hotel-Room</title>
+    <title>Gallery's Hotel</title>
     <link rel="stylesheet" href="css/styleroom.css" />
   </head>
   <body>
-    <div class="slide-room">
-      <div class="div">
-        <p class="back"><a href="index.html" id="home" style="color:white" class="active">Back</a></p>
-        <div class="overlap"><div class="add-guest-s-room-s">Add Guest(s) &amp; Room(s)</div></div>
-        <div class="overlap-group"><div class="text-wrapper">+</div></div>
-        <div class="div-wrapper"><div class="text-wrapper-2">+</div></div>
-        <div class="overlap-2"><div class="text-wrapper-3">+</div></div>
-        <div class="text-wrapper-4">0</div>
-        <div class="text-wrapper-5">0</div>
-        <div class="text-wrapper-6">0</div>
-        <div class="overlap-group-2"><div class="text-wrapper-7">-</div></div>
-        <div class="overlap-3"><div class="text-wrapper-8">-</div></div>
-        <div class="overlap-4"><div class="text-wrapper-9">-</div></div>
-        <div class="text-wrapper-13">Room(s)</div>
-        <div class="text-wrapper-12">Adult(s)</div>
-        <div class="text-wrapper-11">Children</div>
-        <div class="text-wrapper-10">maximum 17 years old</div>
-        <img class="room" src="asset/Room & Guest.png" />
-        <img class="adult" src="asset/Adult.png" />
-        <img class="children" src="asset/Children.png" />
-        <div class="overlap-5"><div class="text-wrapper-14">APPLY</div></div>
-        <div class="rectangle"></div>
-      </div>
-    </div>
+    <section id="book-now" style="padding-top: 100px; background: url(./asset/layanan2.png); background-repeat: no-repeat; background-size: 34%;background-position: left;">
+                <div class="book-now">
+                <button class="btn">Booking Here</button>
+                </div>
+                    <div class="ID-form-container">
+                        <div class="ID-form">
+                            <table cellpadding="5" style="border-collapse: collapse;"  class="content-table">
+                                <thead>
+                                    <tr>
+                                        <td  style="text-align: center"><b>Check In</b></td>
+                                        <td  style="text-align: center"><b>Check Out</b></td>
+                                    </tr>
+                                </thead>
+                                <tr>
+                                  <td>
+                                    <select class="button" id="prov1" onchange="loadKota(this.value, 'kot1')">
+                                      <option value="" selected="" disabled="">-- Select Province --</option>
+                                      <option value="jw">Jawa</option>
+                                      <option value="sum">Sumatera</option>
+                                      <option value="kal">Kalimantan</option>
+                                    </select>
+                                  </td>
+                                  <td>
+                                    <select class="button" id="prov2" onchange="loadKota(this.value, 'kot2')">
+                                      <option value="" selected="" disabled="">-- Select Hotel --</option>
+                                    </select>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <select class="button" id="date1">
+                                      <option value="" selected="" disabled="">-- Check In --</option>
+                                    </select>
+                                  </td>
+                                  <td>
+                                    <select class="button" id="date2">
+                                      <option value="" selected="" disabled="">-- Check Out --</option>
+                                    </select>
+                                  </td>
+                                </tr>
+                                <tr>
+         
+                                </tr>
+                                <tr>
+    
+                                </tr>
+                                <thead>
+                                    <tr><td colspan="2" style="text-align: center"><b>Book Now</b></td></tr>
+                                </thead>
+                                <td>Adult</td>
+                                <td><input  class="button"  type="number" id="berat" min="1" step="1" value="1"></td>
+                              </tr>
+                              <tr>
+                                <td>Children</td>
+                                <td><input  class="button"  type="number" id="berat" min="1" step="1" value="1"></td>
+                              </tr>
+                              <tr>
+                                <tr>
+                                  <td>Room</td>
+                                  <td><input  class="button"  type="number" id="berat" min="1" step="1" value="1"></td>
+                                </tr>
+                                <tr>
+                                  <td>Type</td>
+                                  <td>
+                                    <select class="button" id="resepsionis">
+                                      <option value="" selected="" disabled="">-- Type Room --</option>
+                                      <option value="std">Standard Room</option>
+                                      <option value="sup">Superior Room</option>
+                                      <option value="del">Deluxe Room</option>
+                                    </select>
+                                  </td>
+                                </tr>
+                                <thead>
+                                  <tr><td colspan="2" style="text-align: center"><b>Total Room Fee :</b></td></tr>
+                                </thead>
+                                <td>
+                                  <select class="button" id="payment">
+                                    <option value="" selected="" disabled="">-- Discount --</option>
+                                    <option value="std">Haven't Discount</option>
+                                    <option value="sup">5 %</option>
+                                    <option value="del">10%</option>
+                                  </select>
+                                </td>
+                                <td>
+                                  <select class="button" id="payment">
+                                    <option value="" selected="" disabled="">-- Payment Method --</option>
+                                    <option value="std">Bank Transfer</option>
+                                    <option value="sup">E-Wallet</option>
+                                    <option value="del">Kartu Credit</option>
+                                  </select>
+                                </td>
+                                <thead>
+                                  <tr><td colspan="2" style="text-align: center"><b>Total Payment :</b></td></tr>
+                                </thead>
+                                <tr>
+                                  <td colspan="2"><button class="button" onclick="cekBooking()">Booking</button></td>
+                                </tr>
+                                <tr>
+                                  <td colspan="2"><button class="button" onclick="cekBooking()"><a href="index.html"id="home-link" style="color: rgb(230, 27, 27);"><b>Cancel</b></a></button></td>
+                                </tr>
+                              </table>
+                              <br>
+                              <div id="hasil"></div>
+                        </div>
+                  </div>
+            </section>
   </body>
-</html>
+  </html>
