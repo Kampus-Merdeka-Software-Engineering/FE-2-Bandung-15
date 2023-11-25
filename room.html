@@ -16,10 +16,7 @@
                         <div class="ID-form">
                             <table cellpadding="5" style="border-collapse: collapse;"  class="content-table">
                                 <thead>
-                                    <tr>
-                                        <td  style="text-align: center"><b>Check In</b></td>
-                                        <td  style="text-align: center"><b>Check Out</b></td>
-                                    </tr>
+                                    <tr><td colspan="2" style="text-align: center"><b>Book Now</b></td></tr>
                                 </thead>
                                 <tr>
                                   <td>
@@ -38,7 +35,7 @@
                                 </tr>
                                 <tr>
                                   <td>
-                                    <select class="button" id="date1">
+                                    <select class="button" id="date1" type="date">
                                       <option value="" selected="" disabled="">-- Check In --</option>
                                     </select>
                                   </td>
@@ -55,19 +52,19 @@
     
                                 </tr>
                                 <thead>
-                                    <tr><td colspan="2" style="text-align: center"><b>Book Now</b></td></tr>
+                                    <tr><td colspan="2" style="text-align: center"><b>Order Details</b></td></tr>
                                 </thead>
                                 <td>Adult</td>
-                                <td><input  class="button"  type="number" id="berat" min="1" step="1" value="1"></td>
+                                <td><input  class="button"  type="number" id="adult" min="0" step="1" value="1"></td>
                               </tr>
                               <tr>
                                 <td>Children</td>
-                                <td><input  class="button"  type="number" id="berat" min="1" step="1" value="1"></td>
+                                <td><input  class="button"  type="number" id="child" min="0" step="1" value="1"></td>
                               </tr>
                               <tr>
                                 <tr>
                                   <td>Room</td>
-                                  <td><input  class="button"  type="number" id="berat" min="1" step="1" value="1"></td>
+                                  <td><input  class="button"  type="number" id="room" min="1" step="1" value="1"></td>
                                 </tr>
                                 <tr>
                                   <td>Type</td>
@@ -94,9 +91,10 @@
                                 <td>
                                   <select class="button" id="payment">
                                     <option value="" selected="" disabled="">-- Payment Method --</option>
-                                    <option value="std">Bank Transfer</option>
+                                    <option value="std">Transfer Bank</option>
                                     <option value="sup">E-Wallet</option>
-                                    <option value="del">Kartu Credit</option>
+                                    <option value="del">Credit Card</option>
+                                    <option value="del">Cash On Delivery</option>
                                   </select>
                                 </td>
                                 <thead>
