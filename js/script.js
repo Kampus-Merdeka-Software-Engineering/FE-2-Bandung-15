@@ -3,9 +3,9 @@ window.addEventListener('scroll', function () {
     const logoImage = document.getElementById('logoNav');
     header.classList.toggle("sticky", window.scrollY > 0);
       if (scrollY > 0) {
-        logoImage.src = './assets/logo-navbar-white.png'; 
+        logoImage.src = './asset/Logo.png'; 
     } else {
-        logoImage.src = './assets/logo-navbar-orange.png'; 
+        logoImage.src = './asset/Logo.png'; 
   }
 });
 
