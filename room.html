@@ -10,99 +10,10 @@
 
 <body>
   <div id="content">
-
   </div>
-    <!-- <section id="book-now" style="padding-top: 100px; background: url(./asset/layanan2.png); background-repeat: no-repeat; background-size: 34%;background-position: left;">
-        <div class="book-now">
-            <button class="btn">Booking Here</button>
-        </div>
-        <div class="ID-form-container">
-            <div class="ID-form">
-                <table cellpadding="5" style="border-collapse: collapse;" class="content-table">
-                    <thead>
-                        <tr>
-                            <td colspan="2" style="text-align: center"><b>Book Now</b></td>
-                        </tr>
-                    </thead>
-                    <tr>
-                        <td>
-                            <h3>CheckIn</h3>
-                            <input type="date" id="myDate" value="2014-02-09">
-                        </td>
-                        <td>
-                            <h3>CheckOut</h3>
-                            <input type="date" id="myDate" value="2014-02-09">
-                        </td>
-                    </tr>
-                    <thead>
-                        <tr>
-                            <td colspan="2" style="text-align: center"><b>Order Details</b></td>
-                        </tr>
-                    </thead>
-                    <tr>
-                        <td>Name</td>
-                        <td><input class="button" type="text"></td>
-                    </tr>
-                    <tr>
-                        <td>Total Visitor</td>
-                        <td><input class="button" type="number" id="adult" min="0" step="1" value="1"></td>
-                    </tr>
-                    <tr>
-                        <td>Total Room</td>
-                        <td><input class="button" type="number" id="room" min="1" step="1" value="1"></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="hidden" id="hotelId" value="">
-                            <input type="hidden" id="price" value="">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Type</td>
-                        <td>
-                            <select class="button" id="resepsionis">
-                                <option value="" selected="" disabled="">-- Type Room --</option>
-                                <option value="std">Standard Room</option>
-                                <option value="sup">Superior Room</option>
-                                <option value="del">Deluxe Room</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Payment Method</td>
-                        <td>
-                            <select class="button" id="payment">
-                                <option value="" selected="" disabled="">-- Payment Method --</option>
-                                <option value="transfer">Transfer Bank</option>
-                                <option value="ewallet">E-Wallet</option>
-                                <option value="creditcard">Credit Card</option>
-                                <option value="cod">Cash On Delivery</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <thead>
-                        <tr>
-                          <td colspan="2" style="text-align: center"><b>Total Payment :</b></td>
-                      </tr>
-                        <tr>
-                            <td colspan="2" style="text-align: center"><b>Total Payment :</b></td>
-                        </tr>
-                    </thead>
-                    <tr>
-                        <td colspan="2"><button class="button" onclick="calculateTotal()">Booking</button></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2"><button class="button" onclick="cekBooking()"><a href="index.html" id="home-link" style="color: rgb(230, 27, 27);"><b>Cancel</b></a></button></td>
-                    </tr>
-                </table>
-                <br>
-                <div id="hasil"></div>
-            </div>
-        </div>
-    </section> -->
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
+ 
+
       const urlParams = new URLSearchParams(window.location.search);
       const hotelId = urlParams.get('id');
       let data = null;
@@ -114,132 +25,189 @@
   
               if (data) {
                   let htmlContent = `
-                    <section id="book-now" style="padding-top: 100px; background: url(./asset/layanan2.png); background-repeat: no-repeat; background-size: 34%;background-position: left;">
-                          <div class="book-now">
-                              <button class="btn">Booking Here</button>
-                          </div>
-                          
-                          <div class="ID-form-container">
-                              <div class="ID-form">
-                                  <table cellpadding="5" style="border-collapse: collapse;" class="content-table">
-                                      <thead>
-                                          <tr>
-                                              <td colspan="2" style="text-align: center"><b>Book Now</b></td>
-                                          </tr>
-                                      </thead>
-                                      <tr>
-                                          <td>
-                                              <h3>CheckIn</h3>
-                                              <input type="date" id="myDate" value="2014-02-09">
-                                          </td>
-                                          <td>
-                                              <h3>CheckOut</h3>
-                                              <input type="date" id="myDate" value="2014-02-09">
-                                          </td>
-                                      </tr>
-                                      <thead>
-                                          <tr>
-                                              <td colspan="2" style="text-align: center"><b>Order Details</b></td>
-                                          </tr>
-                                      </thead>
-                                      <tr>
-                                          <td>Name</td>
-                                          <td><input class="button" type="text"></td>
-                                      </tr>
-                                      <tr>
-                                          <td>Total Visitor</td>
-                                          <td><input id="guests" class="button" type="number" id="adult" min="0" step="1" value="1"></td>
-                                      </tr>
-                                      <tr>
-                                          <td>Total Room</td>
-                                          <td><input class="button" type="number" id="room" min="1" step="1" value="1"></td>
-                                      </tr>
-                                      <tr>
-                                          <td>
-                                              <input type="hidden" id="hotelId" value="">
-                                              <input type="hidden" id="price" value="">
-                                          </td>
-                                      </tr>
-                                      <tr>
-                                          <td>Type</td>
-                                          <td>
-                                              <select class="button" id="resepsionis">
-                                                  <option value="" selected="" disabled="">-- Type Room --</option>
-                                                  <option value="std">Standard Room</option>
-                                                  <option value="sup">Superior Room</option>
-                                                  <option value="del">Deluxe Room</option>
-                                              </select>
-                                          </td>
-                                      </tr>
-                                      <tr>
-                                          <td>Payment Method</td>
-                                          <td>
-                                              <select class="button" id="payment">
-                                                  <option value="" selected="" disabled="">-- Payment Method --</option>
-                                                  <option value="transfer">Transfer Bank</option>
-                                                  <option value="ewallet">E-Wallet</option>
-                                                  <option value="creditcard">Credit Card</option>
-                                                  <option value="cod">Cash On Delivery</option>
-                                              </select>
-                                          </td>
-                                      </tr>
-                                      <thead>
-                                          <tr>
-                                            <td colspan="2" style="text-align: center"><b>Price : ${data.price} </b></td>
+                  <section id="book-now" style="padding-top: 100px; background: url(./asset/layanan2.png); background-repeat: no-repeat; background-size: 34%;background-position: left;">
+                    <div class="book-now">
+                        <button class="btn">Booking Here</button>
+                    </div>
+                    
+                    <div class="ID-form-container">
+                        <div class="ID-form">
+                            <form id="bookingForm">
+                                <table cellpadding="5" style="border-collapse: collapse;" class="content-table">
+                                    <thead>
+                                        <tr>
+                                            <td colspan="2" style="text-align: center"><b>Book Now</b></td>
                                         </tr>
-                                          <tr>
-                                              <td colspan="2" style="text-align: center"><b>Total Payment : </b></td>
-                                          </tr>
-                                      </thead>
-                                      <tr>
-                                          <td colspan="2"><button class="button" onclick="calculateTotal()">Booking</button></td>
-                                      </tr>
-                                      <tr>
-                                          <td colspan="2"><button class="button" onclick="cekBooking()"><a href="index.html" id="home-link" style="color: rgb(230, 27, 27);"><b>Cancel</b></a></button></td>
-                                      </tr>
-                                  </table>
-                                  <br>
-                                  <div id="hasil"></div>
-                              </div>
-                          </div>
-                      </section>
+                                    </thead>
+                                    <tr>
+                                        <td>
+                                            <h3>CheckIn</h3>
+                                            <input type="date" id="checkin" name="checkin">
+                                        </td>
+                                        <td>
+                                            <h3>CheckOut</h3>
+                                            <input type="date" id="checkout" name="checkout">
+                                        </td>
+                                    </tr>
+                                    <thead>
+                                        <tr>
+                                            <td colspan="2" style="text-align: center"><b>Order Details</b></td>
+                                        </tr>
+                                    </thead>
+                                    <tr>
+                                        <td>Name</td>
+                                        <td><input id="name" class="button" type="text" name="name"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Number of Visitor</td>
+                                        <td><input id="visitors" class="button" type="number" min="1" required name="visitors"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Total Room</td>
+                                        <td><input class="button" type="number" id="room" min="1" required name="room"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="hidden" id="hotelId" name="hotelId" value="">
+                                            <input type="hidden" id="price" name="price" value="">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Type</td>
+                                        <td>
+                                            <select class="button" id="roomtype" name="roomtype">
+                                                <option value="" selected="" disabled="">-- Type Room --</option>
+                                                <option value="std">Standard Room</option>
+                                                <option value="sup">Superior Room</option>
+                                                <option value="del">Deluxe Room</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Payment Method</td>
+                                        <td>
+                                            <select class="button" id="payment" name="payment">
+                                                <option value="" selected="" disabled="">-- Payment Method --</option>
+                                                <option value="transfer">Transfer Bank</option>
+                                                <option value="ewallet">E-Wallet</option>
+                                                <option value="creditcard">Credit Card</option>
+                                                <option value="cod">Cash On Delivery</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <thead>
+                                        <tr>
+                                            <td colspan="2" style="text-align: center"><b>Price : ${data.price} <span id="priceDisplay"></span></b></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" style="text-align: center"><b>Total Payment : <span id="totalPaymentDisplay"></span></b></td>
+                                        </tr>
+                                    </thead>
+                                    <tr>
+                                        <td colspan="2"><button type="submit" class="button">Booking</button></td>
+                                    </tr>
+                                </table>
+                            </form>
+                            <br>
+                            <div id="hasil"></div>
+                        </div>
+                    </div>
+                </section>
                   `;
                   document.getElementById('content').innerHTML = htmlContent;
+                   const form = document.getElementById('bookingForm');
+
+                  form.addEventListener('submit', formSubmitHandler);
+
+                  document.getElementById('checkin').valueAsDate = new Date();
+
+                // Set check-out date to tomorrow
+                const tomorrow = new Date();
+                tomorrow.setDate(tomorrow.getDate() + 1);
+                document.getElementById('checkout').valueAsDate = tomorrow;
+
+                // Menambahkan event listener ke formulir
+                form.addEventListener('submit', formSubmitHandler);
+                price = data.price;
+          
+
+
               } else {
                   console.log("error");
               }
           } catch (error) {
-              console.error('Error:', error);
+              console.error('E5rror:', error);
           }
       }
       getHotel();
-  
-      function calculateTotal() {
-        const jumlahKamar = document.getElementById('room').value;
-        const hargaKamar = data.price;
-        const totalPembayaran = hargaKamar * jumlahKamar;
-        document.getElementById('hasil').innerHTML = `<p>Total Payment: ${totalPembayaran} (${hargaKamar}/room)</p>`;
-    }
 
-    function myFunction() {
-        document.getElementById("myDate").select();
-    }
+      async function formSubmitHandler() {
+        event.preventDefault();
 
-    // Pastikan elemen dengan ID 'room' sudah ada sebelum menambahkan event listener
-    const roomInput = document.getElementById('room');
-    if (roomInput) {
-        roomInput.addEventListener('input', calculateTotal);
-    }
+        const checkInDateValue = document.getElementById('checkin').value;
+        const checkOutDateValue = document.getElementById('checkout').value;
 
-    if (getHotel) {
-      
-    }
+            const checkInDate = new Date(checkInDateValue);
+            const checkOutDate = new Date(checkOutDateValue);
+            
+            const checkInISOString = checkInDate.toISOString();
+            const checkOutISOString = checkOutDate.toISOString();
+        const name = document.getElementById('name').value;
+        const visitors = document.getElementById('visitors').value;
+        const totalRooms = document.getElementById('room').value;
+        const roomType = document.getElementById('roomtype').value;
+        const paymentMode = document.getElementById('payment').value;
 
-   
-  </script>
-  
-    
-  
+        const bookingData = {
+            checkIn: checkInISOString,
+            checkOut: checkOutISOString,
+            type: roomType,
+            name: name,
+            totalRooms: totalRooms,
+            visitors: visitors,
+            price: price,
+            paymentMode: paymentMode,
+            hotelId: hotelId,
+        };
+        console.log(bookingData);
+        try {
+            const response = await fetch('https://orchid-whale-hem.cyclic.app/api/bookings', {
+                method: 'POST',
+                body: JSON.stringify(bookingData),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            if (response.status === 201) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success',
+                    text: 'Booking successful.',
+                    confirmButtonText: 'OK'
+                });
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Booking failed. Please try again later 2.',
+                    confirmButtonText: 'OK'
+                });
+            }
+
+        } catch (error) {
+            console.error('Error:', error);
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Booking failed. Please try again later.',
+                confirmButtonText: 'OK'
+            });
+        }
+    }
+    </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
 </body>
-
 </html>
+
