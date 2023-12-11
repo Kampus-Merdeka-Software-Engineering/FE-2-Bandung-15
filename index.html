@@ -115,7 +115,7 @@
                         <div class="col-xs-12">
                             <label>Email:</label><br>
                             <div class="styled-input wide">
-                                <input type="text" name="email" required />
+                                <input type="email" name="email" required />
                             </div>
                         </div>
                         
@@ -179,6 +179,52 @@
             </div>
         </footer>
   </body>
+  <script>
+  function setupContactForm() {
+  const form = document.getElementById('contact-us');
+  form.addEventListener('submit', async function (event) {
+    event.preventDefault();
+    const formData = new FormData(form);
+    const formProps = Object.fromEntries(formData);
+    console.log(formProps);
+
+    try {
+      const response = await fetch('https://orchid-whale-hem.cyclic.app/api/messages', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formProps),
+      });
+
+    if (response.status === 201) {
+      Swal.fire({
+          icon: 'success',
+          title: 'Success',
+          text: 'Your message has been successfully sent! Thank you for contacting us.',
+          confirmButtonText: 'OK'
+      });
+    } else {
+      Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'Oops! Something went wrong. Your message could not be sent. Please try again later.',
+          confirmButtonText: 'OK'
+      });
+    }
+
+    } catch (error) {
+    console.error("Error:", error);
+    Swal.fire({
+      icon: 'error',
+      title: 'Error',
+      text: 'Oops! Something went wrong. Your message could not be sent. Please try again later.',
+      confirmButtonText: 'OK'
+    });
+    } 
+});
+}
+  </script>
   <script src="./js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <html>

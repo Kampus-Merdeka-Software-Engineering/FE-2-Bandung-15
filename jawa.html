@@ -7,102 +7,58 @@
     <link rel="stylesheet" href="css/stylepulau.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 </head>
-    <body>
+<body>
     <h1>Gallery's Hotel Jawa</h1>
-      <div class="content-container">
-        <nav class="banner2">
-            <img src="asset/Hotel (1).jfif"width="100%">
-        </nav>
-        <div class="branding1">
-            <h2>Jl. Melati No.15, Bandung</h2>
-            <p>Gallery's Hotel is the right choice when visiting tourist attractions. An ideal combination of price, comfort and practicality, this place offers a trendy atmosphere with facilities designed for tourists.</p>
-            <p>Property Policy
-            <br>1. This property requires guests who will stay in this property to pay a security deposit of IDR 100,000,-
-            <br>2. Check in from 2 pm to 4 am on the next day
-            <br>3. Check out before 12 pm</p>
-            <h3 style="color:rgb(0, 0, 0)">Rp 897.000,00</h3>
-            <h3 style="color:rgb(230, 27, 27)">Rp Harga Diskon</h3>
-            <a href="room.html">
-               <button class="tombol">Book Now</button> 
-            </a>
-        </div>
-      </div>
 
-      <div class="content-container">
-        <nav class="banner2">
-            <img src="asset/Hotel (2).jfif" width="100%">
-        </nav>
-        <div class="branding1">
-            <h2>Jl. Anggrek No.15, Yogyakarta</h2>
-            <p>As well as a terrace, this 5-star hotel also has air-conditioned rooms with free WiFi, each equipped with a private bathroom. The National Museum is 5.3 km away, and the House Museum is 5.3 km from the hotel.</p>
-            <p>Property Policy
-            <br>1. This property requires guests who will stay in this property to pay a security deposit of IDR 100,000,-
-            <br>2. Check in from 2 pm to 4 am on the next day
-            <br>3. Check out before 12 pm</p>
-            <h3 style="color:rgb(0, 0, 0)">Rp 800.000,00</h3>
-            <h3 style="color:rgb(230, 27, 27)">Rp Harga Diskon</h3>
-            <a href="room.html">
-               <button class="tombol">Book Now</button> 
-            </a>
-        </div>
-      </div>
+    <div id="hotelContainer"></div>
 
-      <div class="content-container">
-        <nav class="banner2">
-            <img src="asset/Hotel (3).jfif"width="100%">
-        </nav>
-        <div class="branding1">
-            <h2>Jl. Bunga Cempaka No.15, Semarang</h2>
-            <p>Gallery's Hotel is strategically located near the beach, suitable for couples, families or company holidays, pedestrian area with shops and restaurants. An outdoor swimming pool, massage service and fitness center are available.</p>
-            <p>Property Policy
-            <br>1. This property requires guests who will stay in this property to pay a security deposit of IDR 100,000,-
-            <br>2. Check in from 2 pm to 4 am on the next day
-            <br>3. Check out before 12 pm</p>
-            <h3 style="color:rgb(0, 0, 0)">Rp 832.000,00</h3>
-            <h3 style="color:rgb(230, 27, 27)">Rp Harga Diskon</h3>
-            <a href="room.html">
-               <button class="tombol">Book Now</button> 
-            </a>
-        </div>
-      </div>
+    <script>
+        async function getData() {
+            try {
+                const urlParams = new URLSearchParams(window.location.search);
+                const searchValue = 'jawa';
+                const response = await fetch('https://orchid-whale-hem.cyclic.app/api/posts/search?location=' + searchValue);
+                const data = await response.json();
+                const hotels = data.hotels;
 
-      <div class="content-container">
-        <nav class="banner2">
-            <img src="asset/Hotel (4).jfif"width="100%">
-        </nav>
-        <div class="branding1">
-            <h2>Jl. Mawar No.15, Surabaya</h2>
-            <p>Gallery's Hotel is a mid-range hotel located on the outskirts of the Bukit Bintang shopping area. This hotel is specially designed for today's business and leisure travelers.</p>
-            <p>Property Policy
-            <br>1. This property requires guests who will stay in this property to pay a security deposit of IDR 100,000,-
-            <br>2. Check in from 2 pm to 4 am on the next day
-            <br>3. Check out before 12 pm</p>
-            <h3 style="color:rgb(0, 0, 0)">Rp 895.000,00</h3>
-            <h3 style="color:rgb(230, 27, 27)">Rp Harga Diskon</h3>
-            <a href="room.html">
-               <button class="tombol">Book Now</button> 
-            </a>
-        </div>
-      </div>
+                if (hotels.length > 0) {
+                    let htmlContent = '';
 
-      <div class="content-container">
-        <nav class="banner2">
-            <img src="asset/Hotel (5).jfif"width="100%">
-        </nav>
-        <div class="branding1">
-            <h2>Jl. Lily No.15, Jakarta</h2>
-            <p>Gallery's Hotel also has direct access to the Trans Studio playground for a complete holiday experience. The latest technology is also used at this hotel to provide the best staycation experience for every guest.</p>
-            <p>Property Policy
-            <br>1. This property requires guests who will stay in this property to pay a security deposit of IDR 100,000,-
-            <br>2. Check in from 2 pm to 4 am on the next day
-            <br>3. Check out before 12 pm</p>
-            <h3 style="color:rgb(0, 0, 0)">Rp 897.000,00</h3>
-            <h3 style="color:rgb(230, 27, 27)">Rp Harga Diskon</h3>
-            <a href="room.html">
-               <button class="tombol">Book Now</button> 
-            </a>
-        </div>
-      </div>
-          <button type="button" class="cancelbtn"><a href="index.html"id="home-link" style="color: #f1f1f1;">Cancel</a></button>
-    </body>
+                    hotels.forEach((hotel, index) => {
+                        htmlContent += `
+                            <div class="content-container">
+                                    <nav class="banner2">
+                                        <img src="${hotel.images[0].url}" width="100%">
+                                    </nav>
+                                    <div class="branding1">
+                                        <h2>${hotel.name}</h2>
+                                        <h3>${hotel.city}</h3>
+                                        <p>${hotel.description}</p>
+                                        <p>Property Policy
+                                            <br>1. This property requires guests who will stay in this property to pay a security deposit of IDR 100,000,-
+                                            <br>2. Check in from 2 pm to 4 am on the next day
+                                            <br>3. Check out before 12 pm
+                                        </p>
+                                        <h3 style="color:rgb(0, 0, 0)">${hotel.price}</h3>
+                                        <a href="room.html">
+                                            <button class="tombol">Book Now</button>
+                                    </div>
+                                </a>
+                            </div>
+                        `;
+                    });
+
+                    // Append the generated HTML to the document
+                    document.getElementById('hotelContainer').innerHTML = htmlContent;
+                } else {
+                    console.log('No hotels available.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+
+        getData();
+    </script>
+</body>
 </html>

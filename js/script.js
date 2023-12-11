@@ -1,5 +1,3 @@
-const API_URL = "https://orchid-whale-hem.cyclic.app";
-
 window.addEventListener('scroll', function () {
     const header = document.querySelector('header');
     const logoImage = document.getElementById('logoNav');
@@ -26,50 +24,3 @@ function fitur(fitur) {
     }
     document.getElementById(fitur).style.display = "block";  
   }
-
-// contact us 
-function setupContactForm() {
-  const form = document.getElementById('contact-us');
-  form.addEventListener('submit', async function (event) {
-    event.preventDefault();
-    const formData = new FormData(form);
-    const formProps = Object.fromEntries(formData);
-    console.log(formProps);
-
-    try {
-      const response = await fetch(`${API_URL}/api/messages`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formProps),
-      });
-
-    if (response.status === 201) {
-      Swal.fire({
-          icon: 'success',
-          title: 'Success',
-          text: 'Your message has been successfully sent! Thank you for contacting us.',
-          confirmButtonText: 'OK'
-      });
-    } else {
-      Swal.fire({
-          icon: 'error',
-          title: 'Error',
-          text: 'Oops! Something went wrong. Your message could not be sent. Please try again later.',
-          confirmButtonText: 'OK'
-      });
-    }
-
-  } catch (error) {
-    console.error("Error:", error);
-    Swal.fire({
-      icon: 'error',
-      title: 'Error',
-      text: 'Oops! Something went wrong. Your message could not be sent. Please try again later.',
-      confirmButtonText: 'OK'
-    });
-  }
-  
-});
-}
